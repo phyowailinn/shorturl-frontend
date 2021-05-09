@@ -1,10 +1,12 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
+// Redirect the url is valid/invalid.
 const Redirect = () => {
   const router = useRouter();
   const query = router?.query;
 
+  // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
     const fetchAPI = async (code) => {
       let response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/url/redirect`,{
@@ -12,7 +14,7 @@ const Redirect = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code }),
       })
-      
+
       if (response?.status == 302) {
         console.log(response?.status)
         const { data } = await response.json();
