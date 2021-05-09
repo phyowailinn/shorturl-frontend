@@ -25,7 +25,7 @@ NEXT_PUBLIC_API_URL=http://dev.shorturl-backend.local/api
 
 ## Nice!
 
-Laravel short url is now set up on your homepage.
+NextJS short url frontend is now set up on your homepage.
 
 ## Credits
 - Created by [fiberno](https://github.com/phyowailinn)
